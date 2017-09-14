@@ -6,13 +6,13 @@
     <meta name="author" content="victoryhardware.in">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="http://mdmsb.github.io/purecss.css">
-	
+	<script src="jquery-3.2.1.slim.min.js"></script>
 	<title>hadeedtraders.in</title>
 
 <style type="text/css" media="screen">
 	body{background-image:url("img/clipart.png");background-attachment:fixed;
 	background-size:160px 120px;max-width:900px;margin:auto;border-bottom:1px solid;background-color:;}
-	header{max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;text-shadow:2px 2px red;}
+	header{height:140px;max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;text-shadow:2px 2px red;}
 	footer{max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;}
 	a {text-decoration:none;color:white;}
 	h1,p{text-align:center;}
@@ -30,6 +30,10 @@
 	
 	.menu {width:99.5%;height:20px;overflow:hidden;text-align:center;border:.5px solid red;margin:auto;}
 	.submenu {background-color:brown;float:left;width:33.30%;height:100%;}
+	
+	.scrollnone {display:none;}
+	.scrollblock {display:block;position:fixed;top:0.1px;max-width:900px;}
+	
 </style>
 
 </head>
@@ -46,7 +50,11 @@
 <div class="submenu">Our Products</div>
 <div class="submenu">Contact Info</div>
 </div>
-
+<div class="menu scrollnone ">
+<div class="submenu">Home</div>
+<div class="submenu">Our Products</div>
+<div class="submenu">Contact Info</div>
+</div>
 <br>
 
 <img class="card banner" src="img/imghometop.jpg"/>
@@ -119,6 +127,22 @@
 <p>Copyright, disclaimers Everything is reserved..</p>
 			
 </footer>
+<script>
+$(document).ready(function(){
+slider();
+});
+$(window).scroll(function(){
+slider();
+});
 
+function slider(){
+if(document.body.scrollTop > 140)
+	$('.scrollnone').addClass('scrollblock').removeClass('scrollnone');
+else
+	$('.scrollblock').addClass('scrollnone').removeClass('scrollblock');
+}
+
+
+</script>
 </body>
 </html>
