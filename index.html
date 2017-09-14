@@ -28,11 +28,14 @@
 	marquee{text-align:center;}
 	.card>p {color:white;text-align:center;}
 	
-	.menu {width:99.5%;height:30px;overflow:hidden;text-align:center;border:.5px solid red;margin:auto;}
-	.submenu {background-color:brown;float:left;width:33.30%;height:100%;padding-top:5px;}
 
-	.scrollnone {display:none;}
-	.scrollblock {display:block;position:fixed;top:0.1px;max-width:900px;}
+	.menu {max-width:900px; height:30px; overflow:hidden; text-align:center;border:; background-color:#800000;}
+
+	.scrollblock {display:block; position:fixed; top:0.1px;width:100%;}
+	
+	.submenu {width:300px; margin:auto;}
+	.submenu>a {background-color:brown;float:left;width:98px;height:100%;padding-top:5px; border:1px solid; border-radius:50px;}
+
 	
 </style>
 
@@ -45,15 +48,13 @@
 <h1>Welcome to Hadeed Traders</h1>
 <p>agricultural tools and hardware wholesaler</p>
 </header>
-<div class="menu">
-<div class="submenu"><a href="#">Home</a></div>
-<div class="submenu"><a href="products.html">Our Products</a></div>
-<div class="submenu"><a href="contact.html">Contact Info</a></div>
-</div>
+
 <div class="menu scrollnone ">
-<div class="submenu"><a href="#">Home</a></div>
-<div class="submenu"><a href="products.html">Our Products</a></div>
-<div class="submenu"><a href="contact.html">Contact Info</a></div>
+		<div class="submenu">
+		<a href="#">Home</a>
+		<a href="products.html">Our Products</a>
+		<a href="contact.html">Contact Info</a>
+		</div>
 </div>
 <br>
 
