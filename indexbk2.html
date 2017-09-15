@@ -31,13 +31,11 @@
 
 	.menu {max-width:900px; height:30px; overflow:; text-align:center;border:; background-color:#800000;}
 
-	.scrollblock {display:block; position:fixed; top:0.1px;max-width:900px;width:100%;z-index:1;}
+	.scrollblock {display:block; position:fixed; top:0.1px;max-width:900px;width:100%;}
 	
-	.submenu {list-style-type:none;background-color:brown;height:40px;padding:0;margin:0;}
-	.submenu>li {float:left;border-right:1px solid #bbb;}
-	.submenu>li>a {display:block;padding:11px 14px;}
-	.submenu>li>a:hover {background-color:red;}
-	.active {background-color:green;}
+	.submenu {width:300px; margin:auto;}
+	.submenu>a {background-color:brown;float:left;width:98px;height:100%;padding-top:5px; border:1px solid; border-radius:50px;}
+
 	
 </style>
 
@@ -53,16 +51,13 @@
 
 <div class="menu ">
 		<div class="scrollnone ">
-		<ul class="submenu">
-		<li><a class="active" href="#">Home</a></li>
-		<li><a href="products.html">Products</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		</ul>
+		<div class="submenu">
+		<a href="#">Home</a>
+		<a href="products.html">Products</a>
+		<a href="contact.html">Contact</a>
+		</div>
 		</div>
 </div>
-<br>
-
-
 <br>
 
 <img class="card banner" src="img/imghometop.jpg"/>
