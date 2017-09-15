@@ -6,21 +6,30 @@
     <meta name="author" content="victoryhardware.in">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="http://mdmsb.github.io/purecss.css">
-	
+	<script src="jquery-3.2.1.slim.min.js"></script>	
 	<title>hadeedtraders.in</title>
 
 <style type="text/css" media="screen">
 	body{background-image:url("img/clipart.png");background-attachment:fixed;
 	background-size:160px 120px;max-width:900px;margin:auto;border-bottom:1px solid;}
-	header{max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;text-shadow:2px 2px red;}
-	footer {max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;}
+	header{height:140px;max-width:900px;border:1px solid red; margin:auto; background-color:#800000;color:white;overflow:hidden;}
+	footer{max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;}
 	a {text-decoration:none;color:white;}
-	h1,p{text-align:center;}
+	header>h1{text-align:center; margin:20px 0 10px 0;text-shadow:2px 2px red; }
+	header>p {text-align:center; margin:0px; color:silver;}
 	img {width:100px;height:100px;border-radius:50px;float:left;margin-left:5px;margin-top:10px;}
 	.card {background-color:#FF7F50;margin-top:10px;overflow:hidden;height:120px;border-radius:10px;}
 	.container {border:0;}
 	.col-sm-4 {padding-top:0;padding-bottom:0;}
 	.list {float:left;border-left:1px solid yellow;padding:10px;margin-left:5px;height:100%;}
+	
+	.menu {max-width:900px; height:30px; overflow:; text-align:center;border:; background-color:#800000;}
+
+	.scrollblock {display:block; position:fixed; top:0.1px;max-width:900px;width:100%;}
+	
+	.submenu {width:300px; margin:auto;}
+	.submenu>a {background-color:brown;float:left;width:98px;height:100%;padding-top:5px; border:1px solid; border-radius:50px;}
+
 </style>
 
 </head>
@@ -32,6 +41,16 @@
 <h1>Welcome to Hadeed Traders</h1>
 <p>agricultural tools and hardware wholesaler</p>
 </header>
+
+<div class="menu ">
+		<div class="scrollnone ">
+		<div class="submenu">
+		<a href="index.html">Home</a>
+		<a href="#">Products</a>
+		<a href="contact.html">Contact</a>
+		</div>
+		</div>
+</div>
 <br>
 
 
@@ -66,9 +85,25 @@
 <li style="display:inline;"><a href="products.html">Our Products</a>&nbsp;|&nbsp;</li>
 <li style="display:inline;"><a href="contact.html">Contact Info</a></li>
 </ul>
-<p>Copyright, disclaimers Everything is reserved..</p>
+<p style="text-align:center;">Copyright, disclaimers Everything is reserved..</p>
 			
 </footer>
+<script>
+$(document).ready(function(){
+slider();
+});
+$(window).scroll(function(){
+slider();
+});
 
+function slider(){
+if(document.body.scrollTop > 140)
+	$('.scrollnone').addClass('scrollblock').removeClass('scrollnone');
+else
+	$('.scrollblock').addClass('scrollnone').removeClass('scrollblock');
+}
+
+
+</script>
 </body>
 </html>
