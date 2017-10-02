@@ -5,53 +5,12 @@
     <meta name="Description" content="victoryhardware.in">
     <meta name="author" content="victoryhardware.in">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="http://mdmsb.github.io/purecss.css">
-	<script src="jquery-3.2.1.slim.min.js"></script>
+	
 	<title>hadeedtraders.in</title>
 
 <style type="text/css" media="screen">
 
-#continuous-slider {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#continuous-slider .continuous-slider--wrap {
-  display: block;
-  width: 95%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-#continuous-slider .continuous-slider--wrap ul {
-  display: block;
-  list-style: none;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-#continuous-slider .continuous-slider--wrap ul li {
-  display: block;
-  float: left;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-}
-#continuous-slider .continuous-slider--wrap ul li img {
-  vertical-align: middle;
-  max-width: 100%;
-  max-height: 100%;
-  -webkit-transition: 0 linear left;
-  -moz-transition: 0 linear left;
-  transition: 0 linear left;
-  opacity: 0.65;
-}
-#continuous-slider .continuous-slider--wrap ul li img:hover {
-  opacity: 1;
-}
-
-			
+	
 			
 </style>
 
@@ -60,73 +19,96 @@
 
 <body>
 
-			
-			
-	<div id="continuous-slider">
-  <div class="continuous-slider--wrap">
-    <ul id="continuous-slider--list" class="clearfix">
-      <li><img src="http://lorempixel.com/200/200/city/2" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/3" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/4" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/5" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/6" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/7" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/1" alt="" /></li>
-      <li><img src="http://lorempixel.com/200/200/city/9" alt="" /></li>
-    </ul>
-  </div>
-</div>
-
-
-
+<button onclick="a1()">1</button>
+<button onclick="a2()">2</button>
+<button onclick="a3()">3</button><br>
+<button onclick="a4()">4</button>
+<button onclick="a5()">5</button>
+<button onclick="a6()">6</button><br>
+<button onclick="a7()">7</button>
+<button onclick="a8()">8</button>
+<button onclick="a9()">9</button><br>
+<button onclick="a0()">0</button>
+<button onclick="aadd()">+</button>
+<button onclick="cleara()">clear</button>
+<br><br><div id="result"></div>
 
 <script>
 
+var a = 0;
+var add = 0;
+function a1() {
+	if(a == 0) {a = 1;console.log(a);}
+	else {a = ""+a+1;	console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
+function a2() {
+	if(a == 0) {a = 2;console.log(a);}
+	else {a = ""+a+2;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
+function a3() {
+	if(a == 0) {a = 3;console.log(a);}
+	else {a = ""+a+3;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
+function a4() {
+	if(a == 0) {a = 4;console.log(a);}
+	else {a = ""+a+4;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
-$(function() {
-  var $slider = $("#continuous-slider--list");
-  var sizeImage = 200;
-  var items = $slider.children().length;
-  var itemswidth = items * sizeImage; // 140px width for each client item
-  $slider.css("width", itemswidth);
+function a5() {
+	if(a == 0) {a = 5;console.log(a);}
+	else {a = ""+a+5;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
-  var rotating = true;
-  var sliderspeed = 0;
-  var seeitems = setInterval(rotateSlider, sliderspeed);
+function a6() {
+	if(a == 0) {a = 6;console.log(a);}
+	else {a = ""+a+6;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
-  $(document).on(
-    {
-      mouseenter: function() {
-        rotating = false; // turn off rotation when hovering
-      },
-      mouseleave: function() {
-        rotating = true;
-      }
-    },
-    "#continuous-slider"
-  );
+function a7() {
+	if(a == 0) {a = 7;console.log(a);}
+	else {a = ""+a+7;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
 
-  function rotateSlider() {
-    if (rotating != false) {
-      var $first = $("#continuous-slider--list li:first");
-      $first.animate(
-        { "margin-left": "-" + sizeImage + "px" },
-        3000,
-        "linear",
-        function() {
-          $first.remove().css({ "margin-left": "0px" });
-          $("#continuous-slider--list li:last").after($first);
-        }
-      );
-    } else {
-      $first.stop();
-    }
-  }
-});
-		
+function a8() {
+	if(a == 0) {a = 8;console.log(a);}
+	else {a = ""+a+8;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
+
+function a9() {
+	if(a == 0) {a = 9;console.log(a);}
+	else {a = ""+a+9;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
+
+function a0() {
+	if(a == 0) {a = 0;console.log(a);}
+	else {a = ""+a+0;console.log(a);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
+
+function aadd() {
+	if(add == 0){add = a;console.log(add);}
+	else {add = 0+add+a;console.log(add);}
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
+
+function cleara() {
+	add = "0"; a = "0"; console.log(add, a);
+	document.getElementById("result").innerHTML = a, "<br>", add;
+}
+
 </script>
+
 </body>
 </html>
