@@ -1,310 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta name="Description" content="victoryhardware.in">
-    <meta name="author" content="victoryhardware.in">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="http://mdmsb.github.io/purecss.css">
-	<script src="jquery-3.2.1.slim.min.js"></script>
-	<title>hadeedtraders.in</title>
+  <title>Hadeed Traders</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="purecss.css">
+  <link rel="icon" href="img/logosample.png" type="image/gif" sizes="16x16">
 
-<style type="text/css" media="screen">
-	body{background-image:url("");background-attachment:fixed;
-	background-size:160px 120px;max-width:900px;margin:auto;border-bottom:1px solid;background-color:;}
-	header{height:140px;max-width:900px;border:0; margin:auto; background-color:;color:white;overflow:hidden;}
-/*	footer{max-width:900px;border:1px solid red;margin:auto;background-color:#800000;color:white;} */
-	a {text-decoration:none;color:white;}
-	header>h1{text-align:center; margin:20px 0 10px 0;text-shadow:2px 2px grey; color:black;}
-	header>p {text-align:center; margin:0px; color:black;}
-	.banner{width:calc(99.5% - 20px);margin:10px;border-radius:10px;border:.5px solid green;}
-	
-	.container{border:0;}
-	.col-sm-4{border:0;background-color:grey;height:530px;padding:5;margin:10px;width:calc(33.33% - 20px); border-radius:10px; overflow:hidden;}
-	
-	@media only screen and (max-width:768px){
-	.col-sm-4 {height:auto;width:calc(100% - 20px);}
-	}
-	marquee{text-align:center;}
-	.card>p {color:white;text-align:center;}
-	
+<style>
 
-	.menu {width:100%; height:40px; overflow:; text-align:center;border:; background-color:;}
+/* menubar */
+.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
+.menu{height:22px;width:50px;}
+.linebar {border-radius: 2px;height:4px;width:40px;background-color:#ee6e12;}
+.linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(3) {transition: .5s;}
+.menuon{height:30px;width:40px;}
+.menuon>.linebar {margin-left:-5px;margin-right:-10px;}
+.menuon>.linebar:nth-child(1) {transform: rotate(130deg);margin-top:13px;margin-bottom:-5px;}
+.menuon>.linebar:nth-child(2) {opacity: 0;}
+.menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
 
-	.scrollblock {display:block; position:fixed; top:0.1px;width:100%;z-index:1;}
-	
-	.submenu {list-style-type:none;background-color:#626262;;height:40px;padding:0;margin:0;overflow:hidden;}
-	.submenu>li {float:left;border-right:1px solid #bbb;}
-	.submenu>li>a {display:block;padding:11px 14px;}
-	.submenu>li>a:hover {background-color:#ee6e12;}
-	.submenu>li>.active {background-color:#ee6e12;}
-	/* FOOTER */
-.bottomfooter {background-color:#626262;width:100%;text-align:center;color:#e0e0e0;height:140px; display:block; overflow:hidden;}
-.bottomfooter li{display:inline;}
-.bottomfooter ul{padding:25px 0 20px 0;}
-	
-* {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;}
-.mySlides {display:none}
+body {display:block; margin:0; font-family:sans-serif;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  height:200px;
-  overflow:hidden;
+.myVideo{position:fixed; top:0; left:0; height:120%; width:; z-index:-1; margin-left:; margin-top:-5%;}
+
+.bg1 {background-image:url("img/bg1.png"); background-position:center; background-repeat:no-repeat; height:100vh; background-size:100vh 100vw; border:0px solid; position:fixed; top:0; width:100%; z-index:-2; overflow:hidden;}
+
+.header {height:100px; width:100%; background-color:rgba(30, 45, 59, 1); position:fixed; top:0; }
+.nav {text-transform:uppercase; color:white; float:right; padding:30px;}
+.nav>li {display:inline-block; font-size:16px; padding-right:20px;}
+.show {display:block;}
+@media screen and (max-width:768px){
+.nav {float:; height:100vh; width:100%; border:0px solid; background-color:orange; padding:0; margin:0;}
+.nav>li {display:block; padding:30px 0px; margin-left:40%;}
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.logo {color:black; float:left; background-color:rgba(237, 205, 31, 1); height:100%; width:350px; }
+.logo>img {float:left; padding:15px 20px;}
+.coname {letter-spacing: 0.05em;font-size:23px; padding:15px 20px;}
+.coname1 {font-weight:bold;}
+.coname2 {}
+@media screen and (max-width:768px){
+.logo {width:300px; }
+.logo>img {padding:10px 15px;}
+.coname {padding:10px 5px;}
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.leaders {color:#FFFFFF; font-size:; max-width:700px; text-align:center; margin:auto; font: normal normal normal 60px/1.4em avenir-lt-w01_85-heavy1475544, sans-serif; line-height:1.1em; margin-top:150px; margin-bottom:70vh; text-transform:uppercase;}
+@media screen and (max-width:768px){
+.leaders {font-size:30px;}
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.headings {text-align:center; font: normal normal normal 55px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif; color: #C6C6C6; text-transform:uppercase;    font-weight: bold; letter-spacing: 0.05em; padding-top:30px; padding-bottom:10px;}
+.headingsbar {height:9px;width:130px; background-color:orange; margin:auto; padding:; margin-bottom:20px;}
+.services {height:; background-color:white; width:100%;}
+.servicesbody {width:100%; margin:auto;border:0;}
+.servicesbody>.col-sm-4 {border:; overflow:hidden; background-color:#f7f7f7; margin:20px 10px 100px 10px; padding:0; width:31.2%; height:550px;}
+.serviceshead {color: #3D5975;font: normal normal normal 22px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;font-weight: bold;line-height: 1.6em; padding:10px 30px;}
+.servicestext {font: normal normal normal 15px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif; color: #3B3A3A; line-height: 1.6em; padding:0px 30px 30px 30px;}
+.servicesbody>.col-sm-4>img {width:100%; display:block; height:auto;}
+@media screen and (max-width:768px){
+.servicesbody {width:100%;}
+.servicesbody>.col-sm-4 {width:90%; margin:20px; height:auto;}
 }
 
-.active {
-  background-color: #717171;
+.about {}
+.about>.container {border:0;}
+.aboutside {background-color:#f7f7f7; overflow:hidden;}
+.abouttext {width:65%; float:right;}
+.bg2 {background-image:url("img/bg2.webp"); background-position:center; background-repeat:no-repeat; background-attachment:fixed; background-size:cover; height:100%;}
+.bg2space {min-height:350px;}
+.aboutdata {border:0; background-color:orange; height:150px; padding:; margin:0; text-align:center; overflow:hidden;}
+@media screen and (max-width:992px){
+.aboutdata {height:300px;}
 }
+.aboutdata>li {display:inline-block; padding:20px; }
+.aboutdatahead {font: normal normal normal 55px/1.4em avenir-lt-w01_85-heavy1475544, sans-serif; color:white; font-weight:bold; letter-spacing:0.05em;}
+.aboutdatatext {font: normal normal normal 15px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif; color: #3B3A3A; line-height: 1.6em;}
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-.mySlides>img {height:200px;width:25%; border:;display:block;float:left;}
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 728px) {
-.slideshow-container {  height:150px;}
-.mySlides>img {height:150px;}
-}
-@media only screen and (max-width: 500px) {
-  .text {font-size: 11px}
-.slideshow-container {  height:100px;}
-.mySlides>img {height:100px;}
-}
+.products {background-color:white; overflow:hidden;}
+.productscontain {margin:auto; width:75%; border:;}
+.productscontain>img {width:200px; height:200px; padding:20px;}
 
 
-			
-.border {border:0.1px solid;}
+
+.contact {background-color:white;}
+.maps {width:80%; height:450px; frameborder:0; border:0; margin:auto; display:block;}
+.contact2 {width:80%; margin:auto; border:0;}
+.inquiry {color:#1E2D3B; font-size:30px; font-weight:bold; margin:20px;}
+.inquirytext {margin:20px;}
+
+#name, #email, #subject, #message {width:100%; border-radius:4px; margin:4px 0; padding:6px 10px; box-sizing:border-box;}
+#message {height:150px;}
+#submit {width:80px; border-radius:4px; height:40px; background-color:rgba(30, 45, 59, 1);color: #FFFFFF;}
+.footer { margin:auto; width:80%; text-align:center; border:; height:100px;}
+.footer>div {float:left;padding:30px 0px;}
+.footer>img {float:right;padding:20px 0px;}
 
 </style>
-
 </head>
-
 
 <body>
 
-<header>
-<h1>Welcome to Hadeed Traders</h1>
-<p>agricultural tools and hardware wholesaler</p>
-</header>
-
-<div class="menu ">
-		<div class="scrollnone ">
-		<ul class="submenu">
-		<li><a class="active" href="#">Home</a></li>
-		<li><a href="products.html">Products</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		</ul>
-		</div>
-</div>
-<br>
-<div class="slideshow-container border">
-
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="img/IMG2.jpg">
-  <img src="img/IMG3.jpg">
-  <img src="img/IMG4.jpg">
-  <img src="img/IMG5.jpg">
-  <div class="text"></div>
+<div class="bg1">
+<video autoplay muted loop class="myVideo xs-hidden" id="home">
+<source src="img/file.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="img/IMG1.jpg">
-  <img src="img/IMG6.jpg">
-  <img src="img/IMG7.jpg">
-  <img src="img/IMG8.jpg">
-  <div class="text"></div>
+<div class="header">
+
+<div class="logo">
+<img src="img/logosample.png"/>
+<div class="coname">
+<div class="coname1">HADEED</div>
+<div class="coname2">TRADERS</div>
+</div>
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="img/IMG9.jpg">
-  <img src="img/IMG10.jpg">
-  <img src="img/IMG11.jpg">
-  <img src="img/IMG12.jpg">
-  <div class="text"></div>
+
+
+<div onclick='button()' id="menutoggle" class="bg">
+<div class='menuholder xs-visible sm-visible'>
+<div class='menu' id='menubars'>
+<div class='linebar'></div>
+<div class='linebar'></div>
+<div class='linebar'></div>
+</div>
+</div>
 </div>
 
+<ul id="nav" class="nav sm-hidden xs-hidden">
+<li onclick="smoothScroll(document.getElementById('home'))">home</li>
+<li onclick="smoothScroll(document.getElementById('services'))">services</li>
+<li onclick="smoothScroll(document.getElementById('about'))">about</li>
+<li onclick="smoothScroll(document.getElementById('products'))">Products</li>
+<li onclick="smoothScroll(document.getElementById('contact'))">contact</li>
+</ul>
+
 </div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
+<div class="leaders">wholesaler IN Quality hardware products and agricultural tools </div>
+
+<div class="services" id="services">
+<div class="headings">Services</div>
+<div class="headingsbar"></div>
+
+<div class="container servicesbody">
+<div class="col-sm-4">
+<img src="img/services1.webp"/>
+<div class="serviceshead">Preconstruction Planning</div>
+<div class="servicestext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</div>
 </div>
- 
+<div class="col-sm-4">
+<img src="img/services2.webp"/>
+<div class="serviceshead">Architectural Modelling</div>
+<div class="servicestext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</div>
+</div>
+<div class="col-sm-4">
+<img src="img/services3.webp"/>
+<div class="serviceshead">Construction Management</div>
+<div class="servicestext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</div>
+</div>
+</div>	
+
+</div>
 
 
 
-
-<br><br>
+<div class="about" id="about">
 
 <div class="container">
-		<div class="col-sm-4 card xs-visible">
-			<h2 style="text-align:center;background-color:orange;">About Us</h2>
-			<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002.
-			Our goal is to serve our customers need with the best quality product imported from across india.</p>
-			<p>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli</p>
-			<p>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes,
-			Hand fork, Wheelbarrow etc.</p>
-		</div>
-<div class="col-sm-4">
-<div class="card">
-	<h2 style="text-align:center;background-color:orange;">Contact us</h2>
-	
-	<p>Hadeed Traders
-	2/1, Godown Street, Bangalore, Karnataka 560002, <br>India
-	+9180 43 944 944</p>
-	<p>Google map<br> <a href="https://goo.gl/maps/iTa9mg3YMc72"target="_blank">https://goo.gl/maps</a></p>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.0246821145939!2d77.57755182918645!3d12.965533906342493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e211836ca7%3A0xd57a48706f844b9c!2sHadeed+Traders!5e0!3m2!1sen!2sae!4v1504605758794" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>		
+<div class="bg2"></div>
+<div class="col-sm-6 aboutside">
+<div class="headings">ABOUT</div>
+<div class="headingsbar"></div>
+<div class="servicestext abouttext">
+<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.</p>
+<p>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli</p>
+<p>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc.</p>
 </div>
 </div>
-
-<div class="col-sm-4 card xs-hidden">
-	<h2 style="text-align:center;background-color:orange;">About Us</h2>
-	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002.
-	Our goal is to serve our customers need with the best quality product imported from across india.</p>
-	<p>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli</p>
-	<p>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes,
-	Hand fork, Wheelbarrow etc.</p>
+<div class="col-sm-6 bg2space"></div>
 </div>
 
-<div class="col-sm-4 card">
-	<h2 style="text-align:center;background-color:orange;">Navigation</h2>
-	<ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="products.html">Our Products</a></li>
-	<li><a href="contact.html">Contact Info</a></li>
-	</ul>
-<marquee direction="up"height="350"width="250">
-<img src="img/IMG1.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG2.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG3.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG4.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG5.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG6.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG7.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG8.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG9.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG10.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG11.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG12.jpg" width="200" height="200" alt="" title="" border="0" />
-<img src="img/IMG13.jpg" width="200" height="200" alt="" title="" border="0" />
-</marquee>
-</div>
 
-</div>
+<ul class="aboutdata">
+<li>
+<div class="aboutdatahead">1985</div>
+<div class="aboutdatatext">Year Established</div>
+</li>
 
-<br><br>
-
-<img class="card banner" src="img/imghometopn.jpg"/>
-
-
-
-<footer style="margin-top:20px;">
-<div class="bottomfooter">
-<ul style="overflow:hidden; text-align:center;padding:0;">
-<li style="display:inline;"><a href="index.html">Home</a>&nbsp;|&nbsp;</li>
-<li style="display:inline;"><a href="products.html">Our Products</a>&nbsp;|&nbsp;</li>
-<li style="display:inline;"><a href="contact.html">Contact Info</a></li>
 </ul>
 
 
-<ul>
-<li>© Copyright&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-<li>Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-<li><a style="color:#b3afaf;">Web Design by musab</a></li>
+</div>
+
+
+<div class="products" id="products">
+<div class="headings">OUR PRODUCTS</div>
+<div class="headingsbar"></div>
+
+<div class="productscontain">
+<img src="img/IMG1.jpg">
+<img src="img/IMG2.jpg">
+<img src="img/IMG3.jpg">
+<img src="img/IMG4.jpg">
+<img src="img/IMG5.jpg">
+<img src="img/IMG6.jpg">
+<img src="img/IMG7.jpg">
+<img src="img/IMG8.jpg">
+<img src="img/IMG9.jpg">
+<img src="img/IMG10.jpg">
+<img src="img/IMG11.jpg">
+<img src="img/IMG12.jpg">
+<img src="img/IMG13.jpg">
+</div>
+
+</div>
+
+
+<ul class="aboutdata">
+<li>
+<div class="aboutdatahead">1985</div>
+<div class="aboutdatatext">Year Established</div>
+</li>
+
 </ul>
-	</div>		
-</footer>
+
+
+<div class="contact" id="contact">
+<div class="headings">Contact</div>
+<div class="headingsbar"></div>
+<iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.0246821145939!2d77.57755182918645!3d12.965533906342493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e211836ca7%3A0xd57a48706f844b9c!2sHadeed+Traders!5e0!3m2!1sen!2sae!4v1504605758794"  allowfullscreen></iframe>
+
+
+
+<div class="container contact2">
+
+<div class="col-sm-6">
+<div class="inquiry">Inquiries</div>
+<div class="inquirytext">For any inquiries, questions or commendations, please call: +91 80 43 944 944 or fill out the following form</div>
+<form action="/action_page.php">
+<input type="text" id="name" name="name" placeholder="Your name..">
+<input type="text" id="email" name="email" placeholder="Your email..">
+<input type="text" id="subject" name="subject" placeholder="subject..">
+<input type="text" id="message" name="message" placeholder="your message..">
+<input id="submit" type="submit" value="Submit">
+</form>
+
+</div>
+
+<div class="col-sm-6">
+<div class="inquiry">Head Office</div>
+<div class="inquirytext">2/1, Godown Street, Bangalore, Karnataka 560002</div>
+<div class="inquirytext">India</div>
+
+<div class="inquirytext">talha@hadeedtraders.in</div>
+<div class="inquirytext">tayyib@hadeedtraders.in</div>
+<div class="inquirytext">Tel: +91 80 43 944 944</div>
+<div class="inquirytext">Mail: hadeedtraders.bangalore@gmail.com</div>
+
+<div class="headingsbar"></div>
+<div class="inquirytext">Get a quote: +91 80 43 944 944</div>
+</div>
+
+</div>
+
+<div class="footer">
+<div>© HADEED TRADERS. created by Musab.</div>
+
+<img src="img/s1.png">
+<img src="img/s2.png">
+<img src="img/s3.png">
+</div>
+
+</div>
+
 <script>
 
-function slider(){
-if(document.body.scrollTop > 140)
-	$('.scrollnone').addClass('scrollblock').removeClass('scrollnone');
-else
-	$('.scrollblock').addClass('scrollnone').removeClass('scrollblock');
+window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    
+    var targetY = -100;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+
+
+button();
+
 }
 
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+var press=0;
+function button() {
+if (press == 1){console.log("1");press=0;
+document.getElementById('menubars').classList.remove('menuon');
+document.getElementById('menubars').classList.add('menu');
+document.getElementById('nav').classList.remove('show');
 }
-
-
-$(document).ready(function(){
-slider();
-});
-$(window).scroll(function(){
-slider();
-});
+else {console.log("2");press=1;
+document.getElementById('menubars').classList.remove('menu');
+document.getElementById('menubars').classList.add('menuon');
+document.getElementById('nav').classList.add('show');
+}
+}
 
 
 </script>
